@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Reto Calculadora</title>
+</head>
+<body>
+    
+    <div class="container  d-flex flex-wrap justify-content-center rounded bg-dark mt-5 w-25 h-50">
+        <h1>CALCULADORA_V2</h1>
+        <div class="container-fluid mt-5 ">
+    <form>
+
+        <table >
+         <tr style="text-align:center;">
+         <td colspan = "4">
+         <input id="resultado" type="text" value="0" size="20"  /><input id="memoria" type="hidden" value="0" />
+         </td>
+         </tr>
+        
+         <tr style="text-align:center;">
+         <td>
+         <input type="button" value="7" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=7}else{ var str2='7'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="8" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=8}else{ var str2='8'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="9" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=9}else{ var str2='9'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="/" class="btn btn-success rounded-pill m-2  p-3"
+         onClick="operaciones('dividir'); return false;"
+         >
+         </td>
+         </tr>
+        
+         <tr style="text-align:center;">
+         <td>
+         <input type="button" value="4" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=4}else{ var str2='4'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="5" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=5}else{ var str2='5'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="6" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=6}else{ var str2='6'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="*" class="btn btn-success rounded-pill m-2  p-3"
+         onClick="operaciones('multiplicar'); return false;"
+         >
+         </td>
+         </tr>
+        
+         <tr style="text-align:center;">
+         <td>
+         <input type="button" value="1" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=1}else{ var str2='1'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="2" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=2}else{ var str2='2'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="3" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=3}else{ var str2='3'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         >
+         </td>
+         <td>
+         <input type="button" value="-" class="btn btn-success rounded-pill m-2  p-3"
+         onClick="operaciones('restar'); return false;"
+         >
+         </td>
+         </tr>
+        
+         <tr style="text-align:center;">
+        <td>
+            <input  href="#" type="button" value="C" class="btn btn-success rounded-pill m-2  p-3"
+            onClick="operaciones(`reset`);"
+            >
+        </td>
+        <td>
+         <input type="button" value="0" class="btn btn-info rounded-pill m-2 p-3"
+         onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=0}else{ var str2='0'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}"
+         > 
+         </td>
+         <td>
+         <input type="button" value="=" class="btn btn-success rounded-pill m-2  p-3"
+         onClick="operaciones('igual'); return false;"
+        >
+         </td>
+         <td>
+         <input type="button" value="+" class="btn btn-success rounded-pill m-2  p-3"
+         onClick="operaciones('sumar'); return false;"
+         >
+         </td>
+        
+         </tr>
+        
+        
+        </table>
+        
+        </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="./script/script.js"></script>
+</body>
+</html*
